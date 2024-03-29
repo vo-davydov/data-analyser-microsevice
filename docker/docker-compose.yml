@@ -18,7 +18,7 @@ volumes:
 
 services:
   generator:
-    image: ''
+    image: 'vo-davydov/data-generator-microservice:latest'
     networks:
       - app
     depends_on:
@@ -30,7 +30,7 @@ services:
       - '8081:8081'
 
   analyser:
-    image: ''
+    image: 'vo-davydov/data-analyser-microservice:latest'
     networks:
       - app
     depends_on:
@@ -47,7 +47,7 @@ services:
       - '8082:8082'
 
   store:
-    image: ''
+    image: 'vo-davydov/data-store-microservice:latest'
     networks:
       - app
     depends_on:
